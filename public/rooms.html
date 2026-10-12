@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms &amp; Suites | The Kelvin Ikpeni Grand Hotel</title>
+  <meta name="description" content="Discover our collection of luxury rooms and suites at The Kelvin Ikpeni Grand Hotel. Each accommodation combines five-star comfort, refined design, and panoramic views of Lagos." />
+  <meta name="theme-color" content="#0a1628" />
+  <meta property="og:title" content="Rooms &amp; Suites | The Kelvin Ikpeni Grand Hotel" />
+  <meta property="og:description" content="Five-star accommodations in the heart of Lagos." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="brand">
+        <span class="brand-mark">The <span>Kelvin Ikpeni</span> Grand</span>
+        <span class="brand-tag">Five-Star Luxury · Lagos</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="primary-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/rooms.html" class="active">Rooms &amp; Suites</a></li>
+        <li><a href="/dining.html">Dining</a></li>
+        <li><a href="/#amenities">Amenities</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/booking.html" class="nav-cta"><span>Book Your Stay</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1920&q=80')"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Accommodations</span>
+      <h1>Rooms &amp; <em>Suites</em></h1>
+      <p>Each of our 150 rooms and suites is a private retreat — designed with intention, furnished with care, and offering views that linger in memory.</p>
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>/</span><span>Rooms &amp; Suites</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-chip active" data-type="">All Rooms</button>
+        <button class="filter-chip" data-type="Standard">Standard</button>
+        <button class="filter-chip" data-type="Deluxe">Deluxe</button>
+        <button class="filter-chip" data-type="Executive">Executive</button>
+        <button class="filter-chip" data-type="Suite">Suite</button>
+        <button class="filter-chip" data-type="Presidential">Presidential</button>
+
+        <div class="filter-group">
+          <label for="filterGuests">Guests</label>
+          <input id="filterGuests" type="number" min="0" placeholder="Any" style="max-width:110px" />
+        </div>
+        <div class="filter-group">
+          <label for="filterMinPrice">Min ₦</label>
+          <input id="filterMinPrice" type="number" min="0" placeholder="0" style="max-width:130px" />
+        </div>
+        <div class="filter-group">
+          <label for="filterMaxPrice">Max ₦</label>
+          <input id="filterMaxPrice" type="number" min="0" placeholder="Any" style="max-width:130px" />
+        </div>
+        <button id="clearFilters" class="filter-chip" type="button">Clear</button>
+      </div>
+
+      <p id="roomsCount" style="font-family:var(--font-sans);font-size:0.82rem;color:var(--text-muted);text-align:center;margin-bottom:32px">
+        Loading rooms…
+      </p>
+
+      <div class="rooms-grid" id="roomsGrid">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-panel" style="text-align:center">
+    <div class="container">
+      <span class="eyebrow">Need Help Choosing?</span>
+      <h2 style="margin:18px 0 22px">Our Concierge Can Assist</h2>
+      <p style="max-width:640px;margin:0 auto 32px;font-family:var(--font-sans);font-size:1rem;line-height:1.75">
+        Let us help you find the perfect room for your stay. Our reservations team is available 24 hours a day.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="/contact.html" class="btn btn-gold-outline">Contact Us</a>
+        <a href="/booking.html" class="btn btn-primary">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark">The <span style="color:var(--gold-500)">Kelvin Ikpeni</span> Grand</span>
+          <span class="brand-tag">Five-Star Luxury · Lagos</span>
+          <p>An icon of refined hospitality in Victoria Island — where timeless elegance meets modern luxury.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/rooms.html">Rooms &amp; Suites</a></li>
+            <li><a href="/dining.html">Dining</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Guest Services</h4>
+          <ul>
+            <li><a href="/booking.html">Book a Stay</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/contact.html">Concierge</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>123 Grand Avenue,<br/>Victoria Island, Lagos, Nigeria</p>
+          <p><a href="tel:+234800535846">+234 800 KELVIN</a></p>
+          <p><a href="mailto:reservations@kelvinikpenigrand.com">reservations@kelvinikpenigrand.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> The Kelvin Ikpeni Grand Hotel. All rights reserved.</div>
+        <div class="footer-policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Booking Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/rooms.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

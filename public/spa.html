@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spa &amp; Wellness | The Kelvin Ikpeni Grand Hotel</title>
+  <meta name="description" content="Discover Serenity Spa at The Kelvin Ikpeni Grand Hotel — bespoke treatments, hammam, couples' suites, and holistic wellness in Lagos." />
+  <meta name="theme-color" content="#0a1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================================
+       THE KELVIN IKPENI GRAND HOTEL — Self-Contained Spa Page
+       ============================================================= */
+
+    :root {
+      --navy-900: #0a1628;
+      --navy-800: #0f1e33;
+      --navy-700: #142b48;
+      --navy-600: #1a3a5c;
+      --gold-500: #c9a961;
+      --gold-400: #d4b878;
+      --gold-300: #e0c98f;
+      --emerald-500: #1a9b7a;
+      --white: #ffffff;
+      --ivory: #fdfcf9;
+      --cream: #faf7f2;
+      --text-primary: #f5f0e6;
+      --text-secondary: #b8b1a1;
+      --text-muted: #8a8479;
+      --text-dark: #1a1a1a;
+      --text-dark-muted: #4a4a4a;
+      --border-gold: rgba(201, 169, 97, 0.28);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
+      --shadow-gold: 0 12px 40px rgba(201, 169, 97, 0.25);
+      --radius: 8px;
+      --container: 1320px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--navy-900);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 16px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: var(--gold-500); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--gold-300); }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    ul, ol { list-style: none; }
+    input, textarea, select { font-family: inherit; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    p { color: var(--text-secondary); }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* =============================================================
+       NAVBAR
+       ============================================================= */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 24px 14px;
+      background: transparent;
+      transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(10, 22, 40, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom-color: var(--border-gold);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      padding: 12px 24px 10px;
+    }
+
+    .navbar .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 14px;
+      line-height: 1;
+      transition: margin 0.35s ease;
+    }
+    .navbar.scrolled .brand { margin-bottom: 10px; }
+
+    .brand-mark {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      display: block;
+    }
+    .brand-mark span { color: var(--gold-500); }
+
+    .brand-tag {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-top: 8px;
+      font-weight: 500;
+      padding-left: 0.42em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .nav-menu > li { display: flex; align-items: center; }
+
+    .nav-menu a {
+      position: relative;
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      padding: 6px 0;
+    }
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 0; height: 1px;
+      background: var(--gold-500);
+      transition: width 0.35s ease;
+    }
+    .nav-menu a:hover,
+    .nav-menu a.active { color: var(--gold-500); }
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after { width: 100%; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 22px;
+      margin-left: 6px;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: var(--navy-900) !important;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.35s ease;
+    }
+    .nav-cta:hover {
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-1px);
+      color: var(--navy-900) !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px; height: 44px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px; height: 1.5px;
+      background: var(--gold-500);
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    @media (max-width: 1100px) {
+      .navbar { padding: 16px 24px 12px; }
+      .navbar.scrolled { padding: 10px 24px 8px; }
+      .navbar .brand-mark { font-size: 1.3rem; }
+      .nav-toggle { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        padding: 120px 0 40px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(10, 22, 40, 0.98);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-gold);
+        transform: translateY(-120%);
+        transition: transform 0.5s ease;
+        max-height: 100vh;
+        overflow-y: auto;
+        z-index: 5;
+      }
+      .nav-menu.open { transform: translateY(0); }
+      .nav-menu > li { display: block; width: 100%; }
+      .nav-menu a {
+        display: block;
+        padding: 18px 28px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .nav-menu a::after { display: none; }
+      .nav-cta { margin: 24px 28px 0; justify-content: center; display: flex; }
+    }
+    @media (max-width: 600px) {
+      .navbar .brand-mark { font-size: 1.05rem; white-space: normal; text-align: center; line-height: 1.25; }
+      .navbar .brand-tag { font-size: 0.55rem; letter-spacing: 0.32em; }
+    }
+
+    /* =============================================================
+       BUTTONS
+       ============================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 17px 38px;
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: var(--navy-900);
+      border-color: var(--gold-500);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+      color: var(--navy-900);
+    }
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.35);
+      color: var(--white);
+    }
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--navy-900);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-gold-outline {
+      background: transparent;
+      border-color: var(--gold-500);
+      color: var(--gold-500);
+    }
+    .btn-gold-outline:hover {
+      background: var(--gold-500);
+      color: var(--navy-900);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+    .btn-lg { padding: 20px 44px; font-size: 0.82rem; }
+    .btn-block { width: 100%; }
+
+    /* =============================================================
+       HERO
+       ============================================================= */
+    .page-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 200px 24px 80px;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-size: cover;
+      background-position: center;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 22, 40, 0.78) 0%,
+        rgba(10, 22, 40, 0.6) 40%,
+        rgba(10, 22, 40, 0.92) 100%
+      );
+    }
+    .page-hero-inner {
+      max-width: 900px;
+      animation: heroEnter 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    @keyframes heroEnter {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .page-hero h1 {
+      font-size: clamp(2.2rem, 5.4vw, 4rem);
+      margin: 18px 0 22px;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold-400); }
+    .page-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+    }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 26px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--gold-500); }
+    .breadcrumb span { color: var(--text-muted); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+    }
+    .eyebrow::before,
+    .eyebrow::after {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold-500);
+      opacity: 0.6;
+    }
+    .eyebrow.bare::before,
+    .eyebrow.bare::after { display: none; }
+
+    /* =============================================================
+       SECTIONS
+       ============================================================= */
+    .section { padding: 100px 0; }
+    .section-panel { background: var(--navy-800); }
+    .section-dark { background: var(--navy-900); }
+    .section-light { background: var(--cream); color: var(--text-dark); }
+    .section-light p { color: var(--text-dark-muted); }
+    .section-light h2,
+    .section-light h3,
+    .section-light h4 { color: var(--navy-900); }
+
+    .section-head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3.8vw, 3rem);
+      margin: 18px 0;
+    }
+    .section-head p { font-size: 1rem; line-height: 1.75; }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px auto;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-500), transparent);
+    }
+    .divider-diamond {
+      width: 8px;
+      height: 8px;
+      background: var(--gold-500);
+      transform: rotate(45deg);
+    }
+
+    /* =============================================================
+       INTRO
+       ============================================================= */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .intro-visual {
+      position: relative;
+      padding-bottom: 50px;
+    }
+    .intro-visual img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+    }
+    .intro-visual::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: -20px;
+      width: 60%; height: 70%;
+      border: 2px solid var(--gold-500);
+      border-radius: var(--radius);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    @media (max-width: 900px) {
+      .intro-visual img { height: 380px; }
+      .intro-visual::after { display: none; }
+    }
+    .intro-badge {
+      position: absolute;
+      bottom: 30px; left: -20px;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: var(--navy-900);
+      padding: 22px 28px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      min-width: 160px;
+    }
+    .intro-badge .num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .intro-badge .lbl {
+      font-size: 0.66rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .intro-badge { left: 10px; bottom: 10px; padding: 16px 20px; min-width: 120px; }
+      .intro-badge .num { font-size: 1.8rem; }
+    }
+
+    .intro-content h2 {
+      font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+      margin: 16px 0 22px;
+    }
+    .intro-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .intro-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    @media (max-width: 640px) {
+      .intro-list { grid-template-columns: 1fr; }
+    }
+    .intro-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    .intro-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--emerald-500);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+    .intro-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    /* =============================================================
+       STATS STRIP
+       ============================================================= */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .stat-item { text-align: center; }
+    .stat-item .num {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--gold-500);
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .stat-item .lbl {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* =============================================================
+       TREATMENTS
+       ============================================================= */
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 26px;
+    }
+    .treatment-card {
+      background: var(--navy-800);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .treatment-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-gold);
+      border-color: var(--gold-500);
+    }
+    .treatment-img {
+      position: relative;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--navy-700);
+    }
+    .treatment-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .treatment-card:hover .treatment-img img { transform: scale(1.05); }
+    .treatment-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 12px;
+      background: var(--gold-500);
+      color: var(--navy-900);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+    .treatment-body {
+      padding: 26px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .treatment-body h3 {
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .treatment-body p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .treatment-meta {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--gold-500);
+      font-weight: 500;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* =============================================================
+       FACILITIES
+       ============================================================= */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .facility-card {
+      background: linear-gradient(160deg, rgba(26, 58, 92, 0.55), rgba(10, 22, 40, 0.75));
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      padding: 34px 26px;
+      text-align: center;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .facility-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-500);
+      box-shadow: var(--shadow-gold);
+    }
+    .facility-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(201, 169, 97, 0.08);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-500);
+    }
+    .facility-icon svg { width: 28px; height: 28px; }
+    .facility-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+    .facility-card p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* =============================================================
+       FORM
+       ============================================================= */
+    .form-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--navy-800);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    @media (max-width: 640px) {
+      .form-card { padding: 26px; }
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .required { color: var(--gold-500); }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-control::placeholder { color: var(--text-muted); }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-500);
+      background: var(--navy-800);
+      box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
+    }
+    select.form-control {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a961' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    input[type="date"].form-control::-webkit-calendar-picker-indicator {
+      filter: invert(0.8) sepia(1) saturate(3) hue-rotate(10deg);
+      cursor: pointer;
+    }
+
+    .form-note {
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+    }
+
+    /* Alerts */
+    .alert {
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      border-left: 4px solid;
+    }
+    .alert-success {
+      background: rgba(26, 155, 122, 0.1);
+      border-color: var(--emerald-500);
+      color: #2db892;
+    }
+    .alert-error {
+      background: rgba(220, 60, 60, 0.08);
+      border-color: #dc3c3c;
+      color: #e57373;
+    }
+
+    /* =============================================================
+       FOOTER
+       ============================================================= */
+    .footer {
+      background: #060e1c;
+      border-top: 1px solid var(--border-gold);
+      padding: 70px 0 0;
+      color: var(--text-secondary);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    .footer-brand .brand-mark {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .footer-brand .brand-tag {
+      display: block;
+      margin-bottom: 22px;
+      font-size: 0.6rem;
+      letter-spacing: 0.32em;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border-gold);
+      color: var(--gold-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s ease;
+    }
+    .footer-social a:hover {
+      background: var(--gold-500);
+      color: var(--navy-900);
+      transform: translateY(-3px);
+    }
+    .footer-social svg { width: 15px; height: 15px; }
+
+    .footer-col h4 {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-bottom: 22px;
+      font-weight: 600;
+      text-align: left;
+    }
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+    .footer-col a:hover {
+      color: var(--gold-500);
+      padding-left: 6px;
+    }
+    .footer-contact p {
+      font-size: 0.88rem;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding: 26px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom a { color: var(--text-muted); }
+    .footer-bottom a:hover { color: var(--gold-500); }
+    .footer-policies { display: flex; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 560px) {
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* =============================================================
+       SCROLL-TO-TOP
+       ============================================================= */
+    .scroll-top-btn {
+      position: fixed;
+      right: 24px; bottom: 24px;
+      z-index: 999;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a961, #d4b878);
+      color: #0a1628;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(201, 169, 97, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px) scale(0.8);
+      transition: all 0.4s ease;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+    .scroll-top-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 40px rgba(201, 169, 97, 0.55);
+    }
+    .scroll-top-btn svg { width: 20px; height: 20px; }
+
+    @media (max-width: 640px) {
+      .scroll-top-btn { width: 46px; height: 46px; right: 16px; bottom: 16px; }
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 70px 0; }
+      .section-head { margin-bottom: 40px; }
+      .container { padding: 0 20px; }
+      .page-hero { padding: 150px 20px 60px; min-height: 45vh; }
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="/" class="brand">
+      <span class="brand-mark">The <span>Kelvin Ikpeni</span> Grand</span>
+      <span class="brand-tag">Five-Star Luxury · Lagos</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/rooms.html">Rooms &amp; Suites</a></li>
+      <li><a href="/dining.html">Dining</a></li>
+      <li><a href="/spa.html" class="active">Spa &amp; Wellness</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/booking.html" class="nav-cta">Book Your Stay</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <header class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80')"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Serenity Spa</span>
+      <h1>A Sanctuary of <em>Calm</em></h1>
+      <p>Where ancient traditions meet modern wellness science — a place to restore, renew, and rediscover your centre.</p>
+      <div class="breadcrumb">
+        <a href="/">Home</a><span>/</span><span>Spa &amp; Wellness</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-visual reveal">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=80" alt="Serenity Spa treatment room" loading="lazy" />
+          <div class="intro-badge">
+            <div class="num">12</div>
+            <div class="lbl">Treatment Suites</div>
+          </div>
+        </div>
+
+        <div class="intro-content reveal">
+          <span class="eyebrow bare">Welcome to Serenity</span>
+          <h2>Where Wellness Becomes Ritual</h2>
+          <p>
+            Tucked away on the fourth floor of The Grand, Serenity Spa is a world apart — a realm of warm stone, flickering candles, and the quiet hum of water. Our therapists have trained across Asia, Europe, and Africa, blending the finest techniques into bespoke journeys designed entirely around you.
+          </p>
+
+          <ul class="intro-list">
+            <li>Twelve private treatment suites</li>
+            <li>Traditional Turkish hammam</li>
+            <li>Couples' sanctuary suites</li>
+            <li>Finnish sauna &amp; ice fountain</li>
+            <li>Relaxation lounge with herbal teas</li>
+            <li>Bespoke wellness consultations</li>
+          </ul>
+
+          <div class="intro-actions">
+            <a href="#treatments" class="btn btn-primary">View Treatments</a>
+            <a href="#book-spa" class="btn btn-gold-outline">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS STRIP ============ -->
+  <section class="section section-panel" style="padding:50px 0">
+    <div class="container">
+      <div class="stats-strip" style="border:none">
+        <div class="stat-item"><span class="num">100%</span><span class="lbl">Natural Products</span></div>
+        <div class="stat-item"><span class="num">12</span><span class="lbl">Signature Rituals</span></div>
+        <div class="stat-item"><span class="num">4</span><span class="lbl">Couples Suites</span></div>
+        <div class="stat-item"><span class="num">24</span><span class="lbl">Expert Therapists</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TREATMENTS ============ -->
+  <section class="section section-dark" id="treatments">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Signature Treatments</span>
+        <h2>Curated for Body &amp; Mind</h2>
+        <div class="divider"><span class="divider-diamond"></span></div>
+        <p>Each treatment is a complete journey — thoughtfully designed and adapted to your needs on the day.</p>
+      </div>
+
+      <div class="treatments-grid">
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <span class="treatment-tag">Most Loved</span>
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80" alt="Signature massage" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Grand Signature Massage</h3>
+            <p>A full-body ritual blending Swedish, deep tissue, and hot stone techniques. Completed with warm aromatic oils and a scalp massage.</p>
+            <div class="treatment-meta">
+              <span>⏱ 90 minutes</span>
+              <span>₦95,000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=80" alt="Hammam ritual" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Traditional Hammam Ritual</h3>
+            <p>Steam, black soap, kessa exfoliation, and a Rhassoul clay mask — an ancient ritual reimagined for the modern traveller.</p>
+            <div class="treatment-meta">
+              <span>⏱ 75 minutes</span>
+              <span>₦85,000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Facial treatment" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Radiance Facial</h3>
+            <p>Deep-cleanse, gentle peel, lymphatic massage, and hydration mask tailored to your skin's needs. Leaves skin luminous.</p>
+            <div class="treatment-meta">
+              <span>⏱ 60 minutes</span>
+              <span>₦75,000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <span class="treatment-tag">For Two</span>
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Couples massage" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Couples' Retreat</h3>
+            <p>Side-by-side massages in our private couples' suite, followed by a soak in a rose-petal bath and champagne.</p>
+            <div class="treatment-meta">
+              <span>⏱ 120 minutes</span>
+              <span>₦220,000 / couple</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Aromatherapy" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Aromatherapy Journey</h3>
+            <p>Choose your essential oil blend and drift into deep relaxation with this gentle, restorative full-body massage.</p>
+            <div class="treatment-meta">
+              <span>⏱ 60 minutes</span>
+              <span>₦70,000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="treatment-card">
+          <div class="treatment-img">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Wellness consultation" loading="lazy" />
+          </div>
+          <div class="treatment-body">
+            <h3>Wellness Consultation</h3>
+            <p>A private session with our wellness director to design a personalised programme during your stay — diet, movement, and mindfulness.</p>
+            <div class="treatment-meta">
+              <span>⏱ 45 minutes</span>
+              <span>Complimentary</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FACILITIES ============ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Facilities</span>
+        <h2>Beyond the Treatment Room</h2>
+        <div class="divider"><span class="divider-diamond"></span></div>
+        <p>Guests of Serenity Spa enjoy full access to our wellness facilities on the day of their treatment.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <article class="facility-card">
+          <div class="facility-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 20h20M4 20V8m16 12V8M8 20v-6a4 4 0 0 1 8 0v6M12 2v4"/></svg>
+          </div>
+          <h4>Hydrotherapy Pool</h4>
+          <p>Warm mineral water with air jets, beside floor-to-ceiling windows overlooking the city.</p>
+        </article>
+        <article class="facility-card">
+          <div class="facility-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h4>Finnish Sauna</h4>
+          <p>Cedar-lined sauna with a traditional ice fountain, offering the classic Nordic hot-cold ritual.</p>
+        </article>
+        <article class="facility-card">
+          <div class="facility-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-2 3-4 5-4 8a4 4 0 0 0 8 0c0-3-2-5-4-8z"/></svg>
+          </div>
+          <h4>Steam Room</h4>
+          <p>Eucalyptus-scented steam to open the pores and relax the muscles before your treatment.</p>
+        </article>
+        <article class="facility-card">
+          <div class="facility-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-5 6 5v10"/></svg>
+          </div>
+          <h4>Relaxation Lounge</h4>
+          <p>A peaceful space with reclining beds, herbal teas, dried fruit, and quiet reading material.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING FORM ============ -->
+  <section class="section section-panel" id="book-spa">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Reserve Your Session</span>
+        <h2>Book a Treatment</h2>
+        <div class="divider"><span class="divider-diamond"></span></div>
+        <p>Complete the form below and our spa team will confirm your appointment by email within two hours.</p>
+      </div>
+
+      <div class="form-card reveal">
+        <div id="spaAlert" role="status" aria-live="polite"></div>
+
+        <form id="spaForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sName">Full Name <span class="required">*</span></label>
+              <input id="sName" type="text" name="guestName" class="form-control" required autocomplete="name" placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="sEmail">Email <span class="required">*</span></label>
+              <input id="sEmail" type="email" name="email" class="form-control" required autocomplete="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sPhone">Phone <span class="required">*</span></label>
+              <input id="sPhone" type="tel" name="phone" class="form-control" required autocomplete="tel" placeholder="+234 800 000 0000" />
+            </div>
+            <div class="form-group">
+              <label for="sGuests">Guests <span class="required">*</span></label>
+              <select id="sGuests" name="guests" class="form-control" required>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sTreatment">Preferred Treatment <span class="required">*</span></label>
+            <select id="sTreatment" name="treatment" class="form-control" required>
+              <option value="">Select a treatment</option>
+              <option value="Grand Signature Massage" data-duration="90 minutes">Grand Signature Massage · 90 min · ₦95,000</option>
+              <option value="Traditional Hammam Ritual" data-duration="75 minutes">Traditional Hammam Ritual · 75 min · ₦85,000</option>
+              <option value="Radiance Facial" data-duration="60 minutes">Radiance Facial · 60 min · ₦75,000</option>
+              <option value="Couples' Retreat" data-duration="120 minutes">Couples' Retreat · 120 min · ₦220,000</option>
+              <option value="Aromatherapy Journey" data-duration="60 minutes">Aromatherapy Journey · 60 min · ₦70,000</option>
+              <option value="Wellness Consultation" data-duration="45 minutes">Wellness Consultation · 45 min · Complimentary</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sDate">Preferred Date <span class="required">*</span></label>
+              <input id="sDate" type="date" name="preferredDate" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="sTime">Preferred Time <span class="required">*</span></label>
+              <select id="sTime" name="preferredTime" class="form-control" required>
+                <option value="">Select a time</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+                <option>07:00 PM</option>
+                <option>08:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sTherapist">Preferred Therapist</label>
+            <select id="sTherapist" name="therapist" class="form-control">
+              <option value="Any available">Any available therapist</option>
+              <option value="Female therapist">Female therapist</option>
+              <option value="Male therapist">Male therapist</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sRequests">Special Requests</label>
+            <textarea id="sRequests" name="specialRequests" class="form-control" rows="4" maxlength="800" placeholder="Any allergies, injuries, or preferences we should know about…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Request Appointment</button>
+          <p class="form-note">No payment is taken now. Our spa team will contact you to confirm.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark">The <span style="color:var(--gold-500)">Kelvin Ikpeni</span> Grand</span>
+          <span class="brand-tag">Five-Star Luxury · Lagos</span>
+          <p>An icon of refined hospitality in Victoria Island — where timeless elegance meets modern luxury.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V7c0-1 .3-2 2-2h2V2h-3c-3 0-5 2-5 5v2H6v4h3v9h4z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 3h3l-7 8 8 10h-6l-5-6-6 6H2l8-9L2 3h6l4 5 6-5z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/rooms.html">Rooms &amp; Suites</a></li>
+            <li><a href="/dining.html">Dining</a></li>
+            <li><a href="/spa.html">Spa &amp; Wellness</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guest Services</h4>
+          <ul>
+            <li><a href="/booking.html">Book a Stay</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/contact.html">Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>123 Grand Avenue,<br/>Victoria Island, Lagos, Nigeria</p>
+          <p><a href="tel:+234800535846">+234 800 KELVIN</a></p>
+          <p><a href="mailto:reservations@kelvinikpenigrand.com">reservations@kelvinikpenigrand.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> The Kelvin Ikpeni Grand Hotel. All rights reserved.</div>
+        <div class="footer-policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Navbar ---------- */
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+
+      navToggle.addEventListener('click', () => {
+        const open = navMenu.classList.toggle('open');
+        navToggle.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+      });
+
+      navMenu.querySelectorAll('a').forEach((a) =>
+        a.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          navToggle.classList.remove('open');
+        })
+      );
+
+      /* ---------- Reveal on scroll ---------- */
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add('visible'));
+      }
+
+      /* ---------- Scroll-to-top ---------- */
+      const scrollTopBtn = document.createElement('button');
+      scrollTopBtn.className = 'scroll-top-btn';
+      scrollTopBtn.setAttribute('aria-label', 'Back to top');
+      scrollTopBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+      document.body.appendChild(scrollTopBtn);
+
+      window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* ---------- Footer year ---------- */
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      /* ---------- Spa form ---------- */
+      const form = document.getElementById('spaForm');
+      const alertBox = document.getElementById('spaAlert');
+      const dateInput = document.getElementById('sDate');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+
+      // Set min date to today
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+      }
+
+      // Track treatment duration
+      const treatmentSelect = document.getElementById('sTreatment');
+      let currentDuration = '';
+      if (treatmentSelect) {
+        treatmentSelect.addEventListener('change', () => {
+          const opt = treatmentSelect.options[treatmentSelect.selectedIndex];
+          currentDuration = opt.getAttribute('data-duration') || '';
+        });
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        alertBox.innerHTML = '';
+
+        const fd = Object.fromEntries(new FormData(form).entries());
+        const errors = [];
+
+        if (!fd.guestName || fd.guestName.trim().length < 2) errors.push('Please enter your full name.');
+        if (!/^\S+@\S+\.\S+$/.test(fd.email || '')) errors.push('Please enter a valid email address.');
+        if (!fd.phone || fd.phone.replace(/\D/g, '').length < 7) errors.push('Please enter a valid phone number.');
+        if (!fd.treatment) errors.push('Please select a treatment.');
+        if (!fd.preferredDate) errors.push('Please choose a preferred date.');
+        if (!fd.preferredTime) errors.push('Please choose a preferred time.');
+
+        if (errors.length) {
+          alertBox.innerHTML = `<div class="alert alert-error">${errors.map((x) => `• ${x}`).join('<br/>')}</div>`;
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        try {
+          const res = await fetch('/api/spa', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              guestName: fd.guestName.trim(),
+              email: fd.email.trim(),
+              phone: fd.phone.trim(),
+              treatment: fd.treatment,
+              treatmentDuration: currentDuration,
+              therapist: fd.therapist,
+              preferredDate: fd.preferredDate,
+              preferredTime: fd.preferredTime,
+              guests: Number(fd.guests) || 1,
+              specialRequests: (fd.specialRequests || '').trim(),
+            }),
+          });
+
+          const data = await res.json().catch(() => ({}));
+
+          if (!res.ok) throw new Error(data.message || 'Request failed');
+
+          const ref = data.appointment?.appointmentId || 'CONFIRMED';
+          alertBox.innerHTML = `
+            <div class="alert alert-success">
+              <strong>Appointment Requested</strong><br/>
+              Reference: <strong style="color:var(--gold-400)">${ref}</strong><br/>
+              Our spa team will contact you shortly to confirm.
+            </div>`;
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          form.reset();
+          if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+          }
+        } catch (err) {
+          alertBox.innerHTML = `<div class="alert alert-error">${err.message || 'We could not process your request. Please try again.'}</div>`;
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
